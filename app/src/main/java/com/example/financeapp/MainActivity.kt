@@ -9,10 +9,13 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.financeapp.components.SummarySection
 import com.example.financeapp.components.TopBarGreeting
+import com.example.financeapp.components.TransactionListSection
 import com.example.financeapp.models.currentUser
+import com.example.financeapp.models.transactionList
 
 
 class MainActivity : ComponentActivity() {
@@ -20,14 +23,14 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             MaterialTheme {
-                HomeScreen()
+                HomeScreen(innerPadding = PaddingValues(25.dp))
             }
         }
     }
 }
 
 @Composable
-fun HomeScreen() {
+fun HomeScreen(innerPadding: PaddingValues) {
     Scaffold(
         containerColor = Color.White
     ) { paddingValues ->
@@ -42,6 +45,18 @@ fun HomeScreen() {
 
             Spacer(modifier = Modifier.height(24.dp))
             SummarySection()
+
+            Spacer(modifier = Modifier.height(24.dp))
+            TransactionListSection(transactionList)
         }
+    }
+}
+
+@Preview(showBackground = true,
+    showSystemUi = true)
+@Composable
+fun GreetingPreview() {
+    MaterialTheme {
+        HomeScreen(innerPadding = PaddingValues(25.dp))
     }
 }

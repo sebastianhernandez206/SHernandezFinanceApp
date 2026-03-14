@@ -25,7 +25,7 @@ data class Transaction(
     val icon: ImageVector
 )
 
-val currentUser = User(name = "Juan", balance = 561.98)
+val currentUser = User(name = "Sebastian", balance = 561.98)
 
 val transactionList = listOf(
     Transaction("Supermarket", "Groceries", 45.99, "10:30 AM", Icons.Default.ShoppingCart),
@@ -33,5 +33,9 @@ val transactionList = listOf(
     Transaction("Coffee Shop", "Food & Drinks", 5.75, "8:00 AM", Icons.Default.ShoppingCart),
     Transaction("Electronics Store", "Electronics", 120.00, "3:45 PM", Icons.Default.ShoppingCart),
     Transaction("Bookstore", "Books", 25.99, "2:00 PM", Icons.Default.ShoppingCart),
-    Transaction("Restaurant", "Dining", 60.00, "7:30 PM", Icons.Default.ShoppingCart)
+    Transaction("Restaurant", "Dining", 60.00, "7:30 PM", Icons.Default.ShoppingCart),
+    Transaction("Gym", "Fitness", -25.00, "9:00 AM", Icons.Default.ShoppingCart),
+    Transaction("Movie Theater", "Groceries", 45.99, "10:30 AM", Icons.Default.ShoppingCart),
+    Transaction("Gas Station", "Fuel", -30.50, "12:15 PM", Icons.Default.ShoppingCart),
+    Transaction("Coffee Shop", "Food & Drinks", 5.75, "8:00 AM", Icons.Default.ShoppingCart)
 )
