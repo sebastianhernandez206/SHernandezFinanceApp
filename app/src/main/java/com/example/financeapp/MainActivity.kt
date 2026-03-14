@@ -10,6 +10,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
+import com.example.financeapp.components.SummarySection
 import com.example.financeapp.components.TopBarGreeting
 import com.example.financeapp.models.currentUser
 
@@ -38,6 +39,9 @@ fun HomeScreen() {
         ) {
             Spacer(modifier = Modifier.height(16.dp))
             TopBarGreeting(currentUser)
+
+            Spacer(modifier = Modifier.height(24.dp))
+            SummarySection()
         }
     }
 }
